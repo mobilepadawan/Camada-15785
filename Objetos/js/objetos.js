@@ -100,3 +100,21 @@ let misProductos = [{productoid: 1, nombre: "Macbook Air", stock: 30, precio: 95
                     {productoid: 5, nombre: "Microsoft Surface", stock: 21, precio: 1420}]
 
 aEliminar = misProductos.findIndex(p => p.nombre == "Lenovo i7")
+
+
+//EJEMPLO APLICADO: OBJETOS PRODUCTO Y ARRAY
+let productos = []
+    productos.push(producto1)
+    productos.push(producto2)
+
+//OPERACIONES SOBRE ARRAYS
+let paises = ["Argentina", "Uruguay", "Chile", "Brasil"]
+//.length
+//.indexOf()
+//.split()
+//.join()
+//.filter()
+//.find()
+//.concat()
+//.slice()
+//.splice()
