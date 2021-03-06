@@ -118,3 +118,5 @@ let paises = ["Argentina", "Uruguay", "Chile", "Brasil"]
 //.concat()
 //.slice()
 //.splice()
+
+//Si queda tiempo, ver los métodos incluidos en las variables
