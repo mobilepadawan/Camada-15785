@@ -1,13 +1,10 @@
-//PRIMERA PARTE
-let nombre = "Coder"
-let apellido = "House"
-let edad = 7
-let domicilio = "Dentro de Zoom 123"
+// let nombre = "Coder"
+// let apellido = "House"
+// let edad = 7
+// let domicilio = "Dentro de Zoom 123"
 
-const persona1 = {nombre: "Coder", apellido: "House", edad: 7, domicilio: "Dentro de Zoom 123"}
-const persona2 = {nombre: "Pepe", apellido: "Argento", edad: 55, domicilio: "Barrio de Flores"}
-
-//Esto que tenemos aquí arriba, son los fundamentos de objetos JSON
+// const persona1 = {nombre: "Coder", apellido: "House", edad: 7, domicilio: "Dentro de Zoom 123"}
+// const persona2 = {nombre: "Pepe", apellido: "Argento", edad: 55, domicilio: "Barrio de Flores"}
 
 //FUNCTIÓN CONSTRUCTORA
 // class producto {
@@ -36,9 +33,7 @@ const persona2 = {nombre: "Pepe", apellido: "Argento", edad: 55, domicilio: "Bar
 // const producto2 = new producto("EXO i3", 1, 600, 1.105)
 
 //OPERADOR IN
-
 //console.log("precio" in producto1)
-
 
 //OPERADOR FOR IN
 // for (const propiedad in producto1)
