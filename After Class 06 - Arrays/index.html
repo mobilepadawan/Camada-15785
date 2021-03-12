@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>After Class 06 - Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script defer src="js/arrays.js"></script>
+</head>
+<body>
+    <h1>Productos</h1>
+    <p>Listado de productos en Stock.</p>
+    <div class="center">
+        <br>
+        <button class="btn blue white-text medium waves-effect waves-light" onclick="listarProductos()">LISTAR</button>
+        <button class="btn red darken-3 white-text medium waves-effect waves-light" onclick="muestroOcultoVentanaProducto('hide')">NUEVO PRODUCTO</button>
+        <br>
+        <br>
+    </div>
+    <div class="grey lighten-4 espaciado margenes hide" id="divAltaDeProducto">
+        <h2>Nuevo Producto</h2>
+        <input type="text" id="productoNombre" placeholder="Nombre del producto">
+        <input type="number" id="productoStock" placeholder="Cantidad" value=0>
+        <input type="number" id="productoPrecio" placerholder="Precio de venta" value=0>
+        <div class="center">
+            <button class="btn red white-text medium" onclick="altaNuevoProducto()">AGREGAR</button>
+        </div>
+    </div>
+    <table class="highlight">
+        <thead class="blue darken-3 white-text">
+            <tr>
+                <th>Descripción</th>
+                <th>Stock</th>
+                <th  class="right">Precio</th>
+            </tr>
+        </thead>
+        <tbody id="listadoProductos">
+            <!-- <tr>
+                <td>Descripción del producto</td>
+                <td>30</td>
+                <td>1250.00</td>
+            </tr> 
+            <tr>
+                <td>Descripción del producto</td>
+                <td>30</td>
+                <td>1250.00</td>
+            </tr>
+            <tr>
+                <td>Descripción del producto</td>
+                <td>30</td>
+                <td>1250.00</td>
+            </tr> -->
+        </tbody>
+    </table>
+</body>
+</html>
