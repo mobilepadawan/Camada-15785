@@ -1,3 +1,4 @@
+//PRIMERA PARTE DEL EJERCICIO
 const ls = localStorage
 let nombre = ""
 let edad = ""
@@ -7,7 +8,6 @@ function guardoElementos() {
    nombre = prompt("Ingrese su nombre: ")
    edad = prompt("Ingrese su edad: ")
    email = prompt("Ingrese su correo electrónico: ")
-
    if (nombre != "" && edad != "" && email != "") {
       ls.setItem("nombre", nombre)
       ls.setItem("edad", edad)
@@ -22,7 +22,7 @@ function listarLS() {
    console.log(ls.getItem("email"))
 }
 
-//Alternativa
+//SEGUNDA PARTE DEL EJERCICIO, DESDE DIAPOSITIVA 16
 function listarLS2() {
    debugger
    for (let i = 0; i < ls.length; i++) {
@@ -31,7 +31,7 @@ function listarLS2() {
    }
 }
 
-//Eliminar un ítem
+//Eliminar un ítem - DIAPOSITIVA 17
 function eliminarItem() {
    clave = prompt("Ingrese la Clave a eliminar: ")
    if (clave != "") {
