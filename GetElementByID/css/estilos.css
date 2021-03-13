@@ -1,0 +1,13 @@
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.colorDeFondo {
+    background-color: white;
+}
+
+input {
+    color: grey;
+}
