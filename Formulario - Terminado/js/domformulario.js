@@ -64,5 +64,5 @@ let li = `<li>${camposForm.nombre}</li>
           <li>${camposForm.email}</li>
 `
 
-      const listado = d.getElementById("listado")
-            listado.innerHTML = li 
+const listado = d.getElementById("listado")
+      listado.innerHTML = li 
