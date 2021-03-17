@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="eS">
+    <head>
+        <meta charset="UTF-8">
+        <title>CASA DE CÓDIGO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script defe src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="css/estilos.css">
+        <script defer src="js/jsoncursos.js"></script>
+        <script defer src="classcurso.js"></script>
+    </head>
+    <body>
+        <div class="center black white-text div-header z-depth-3">
+            <img src="images/cc-logo-600x100.png" max-width="600">
+            <h1>CURSOS DE PROGRAMACIÓN SÚPER ACCESIBLES.</h1>
+            <h2>MÁS CURSOS COMPRÁS, MÁS DESCUENTO TE LLEVÁS.</h2>
+        </div>
+        <div id="carrito" class="yellow center div-header">
+            <div class="row margin-2">
+                <div class="col left">
+                    <span>CURSOS EN EL CARRITO: 0</span>
+                </div>
+                <div class="col right">
+                    <button class="btn-floating black yellow-text z-depth-5 waves-effect waves-light" onclick="muestroCheckout()"><i class="material-icons" alt="Ver carrito">shopping_cart</i></a>
+                </div>
+            </div>
+        </div>
+
+        <p>Navega nuestra oferta de cursos de programación. Agregá al carrito aquellos que te interesan y mirá los fabulosos descuentos que obtendrás, mientras más cursos contrates.</p>
+        <div id="cursos" class="center div-courses" width="60%">
+            <h5>OFERTA DE CURSOS</h5>
+            <br>
+            <table class="highlight">
+                <thead class="black white-text">
+                    <tr>
+                        <th>CURSO</th>
+                        <th>DESCRIPCIÓN</th>
+                        <th>IMPORTE</th>
+                        <th>DETALLE</th>
+                        <th>AGREGAR</th>
+                    </tr>
+                </thead>
+                <tbody id="grilladecursos" class="white">
+                    <tr>
+                        <td>JAVASCRIPT</td>
+                        <td>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</td>
+                        <td>$ 15000</td>
+                        <td><button class="btn whitesmoke black-text waves-effect waves-black" onclick=""><i class='material-icons'>search</i></button></td>    
+                        <td><button class="btn yellow black-text waves-effect waves-black" onclick=""><i class='material-icons'>add_shopping_cart</i></button></td>    
+                    </tr>
+                    <tr>
+                        <td>PYTHON</td>
+                        <td>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</td>
+                        <td>$ 15000</td>
+                        <td><button class="btn whitesmoke black-text waves-effect waves-black" onclick=""><i class='material-icons'>search</i></button></td>    
+                        <td><button class="btn yellow black-text waves-effect waves-black" onclick=""><i class='material-icons'>add_shopping_cart</i></button></td>    
+                    </tr>
+                    <tr>
+                        <td>DISEÑO WEB</td>
+                        <td>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</td>
+                        <td>$ 15000</td>
+                        <td><button class="btn whitesmoke black-text waves-effect waves-black" onclick=""><i class='material-icons'>search</i></button></td>    
+                        <td><button class="btn yellow black-text waves-effect waves-black" onclick=""><i class='material-icons'>add_shopping_cart</i></button></td>    
+                    </tr>
+                    <tr>
+                        <td>BACKEND</td>
+                        <td>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</td>
+                        <td>$ 15000</td>
+                        <td><button class="btn whitesmoke black-text waves-effect waves-black" onclick=""><i class='material-icons'>search</i></button></td>    
+                        <td><button class="btn yellow black-text waves-effect waves-black" onclick=""><i class='material-icons'>add_shopping_cart</i></button></td>    
+                    </tr>
+                </tbody>
+            </table>
+        <br>
+        </div>
+        <div id="shoppingcart" class="center div-cart hide">
+            <h5>CARRITO DE COMPRAS <span><i class="material-icons">shopping_cart</i></span></h5>
+            <br>
+            <table class="responsive-table highlight">
+                <thead class="black white-text">
+                    <tr>
+                        <th>CURSO</th>
+                        <th>HORAS</th>
+                        <th class="right">IMPORTE</th>
+                    </tr>
+                </thead>
+                <tbody id="checkout">
+                    <!-- <tr>
+                        <td>JAVASCRIPT</td>
+                        <td>80 hs</td>
+                        <td class="right">15.000</td>    
+                    </tr>
+                    <tr>
+                        <td>PYTHON</td>
+                        <td>50 hs</td>
+                        <td class="right">12.500</td>    
+                    </tr> -->
+                </tbody>
+            </table>
+            <table>
+                <tbody class="grey lighten-4 black-text" id="totales">
+                    <!-- <tr>
+                        <td>SUBTOTAL</td>
+                        <td class="right">27.500</td>
+                    </tr>
+                    <tr>
+                        <td>DESCUENTO</td>
+                        <td class="right">5.500</td>
+                    </tr>
+                    <tr class="blue lighten-4">
+                        <td>TOTAL</td>
+                        <td class="right">22.000</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <br>
+            <button id="btnvolver" class="btn blue white-text waves-effect waves-light" onclick="volverAlListadoDeCursos()"><i class="material-icons align-top">chevron_left</i>volver a cursos</button>
+            <button id="btnfinalizarcompra" class="btn green white-text waves-effect waves-light" onclick="confirmarCompra()"><i class="material-icons">check</i>finalizar compra</button>
+        </div>
+    </body>
+</html>

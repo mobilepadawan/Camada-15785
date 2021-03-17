@@ -1,0 +1,46 @@
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+h2 {
+    font-size: large;
+}
+
+h1, h2, h3, h4, p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+p, span {
+    font-size: medium;
+}
+
+.margin-2 {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.div-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.div-courses {
+    padding: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: whitesmoke;
+}
+
+.div-cart {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.whitesmoke {
+    background-color: whitesmoke !important;
+}
