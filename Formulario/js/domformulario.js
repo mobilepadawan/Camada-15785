@@ -62,7 +62,6 @@ const buttonGuardar = d.createElement("button")
       d.body.onload = recuperarDatos
       d.title = "HTML generado desde JS"
 
-
 //COMO USAR GETELEMENTSBYTAGNAME
       // const paragraph = d.getElementsByTagName("p")
       //       for (let l of paragraph) {
