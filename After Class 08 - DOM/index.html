@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eS">
+    <head>
+        <meta charset="UTF-8">
+        <title>CASA DE CÓDIGO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script defe src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="css/estilos.css">
+        <script defer src="js/arrays.js"></script>
+        <script defer src="js/acdom.js"></script>
+    </head>
+    <body>
+        <div id="encabezado" class="center margin-2">
+            <!-- <h1>Título de mi sitio web</h1>
+            <h2>Y aquí va una breve descripción del mismo.</h2>
+            <img src="images/javascript.png" width="20%"> -->
+        </div>
+        <div id="formulario" class="center margin-2 grey lighten-4 div-margins">
+            <h1>formulario de datos</h1>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+            <input type="number" id="edad" placeholder="Ingrese su edad">
+            <input type="email" id="email" placeholder="Ingrese su correo electrónico">
+            <button class="btn blue white-text" id="btnEnviar">ENVIAR</button>
+        </div>
+        <br>
+        <div id="productos" class="center margin-2 grey lighten-2 div-margins">
+            <table class="highlight">
+                <thead class="black white-text">
+                    <tr>
+                        <td>Producto</td>
+                        <td>Importe</td>
+                    </tr>
+                    <tbody id="listadoCursos" class="white black-text">
+                        <tr>
+                            <td>CURSO DE JAVASCRIPT</td>
+                            <td>$ 15.000</td>
+                        </tr>
+                        <tr>
+                            <td>CURSO DE REACT</td>
+                            <td>$ 18.000</td>
+                        </tr>
+                        <tr>
+                            <td>CURSO DE BACKEND</td>
+                            <td>$ 25.000</td>
+                        </tr>
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+    </body>
+</html>
