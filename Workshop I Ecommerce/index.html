@@ -9,7 +9,8 @@
         <script defe src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <link rel="stylesheet" href="css/estilos.css">
         <script defer src="js/jsoncursos.js"></script>
-        <script defer src="classcurso.js"></script>
+        <script defer src="js/classcurso.js"></script>
+        <script defer src="js/logica.js"></script>
     </head>
     <body>
         <div class="center black white-text div-header z-depth-3">
@@ -20,7 +21,7 @@
         <div id="carrito" class="yellow center div-header">
             <div class="row margin-2">
                 <div class="col left">
-                    <span>CURSOS EN EL CARRITO: 0</span>
+                    <span id="cursosEnCarrito">CURSOS EN EL CARRITO: 0</span>
                 </div>
                 <div class="col right">
                     <button class="btn-floating black yellow-text z-depth-5 waves-effect waves-light" onclick="muestroCheckout()"><i class="material-icons" alt="Ver carrito">shopping_cart</i></a>
@@ -29,7 +30,7 @@
         </div>
 
         <p>Navega nuestra oferta de cursos de programación. Agregá al carrito aquellos que te interesan y mirá los fabulosos descuentos que obtendrás, mientras más cursos contrates.</p>
-        <div id="cursos" class="center div-courses" width="60%">
+        <div id="ofertaDeCursos" class="center div-courses" width="60%">
             <h5>OFERTA DE CURSOS</h5>
             <br>
             <table class="highlight">
@@ -42,8 +43,8 @@
                         <th>AGREGAR</th>
                     </tr>
                 </thead>
-                <tbody id="grilladecursos" class="white">
-                    <tr>
+                <tbody id="grillaDeCursos" class="white">
+                    <!-- <tr>
                         <td>JAVASCRIPT</td>
                         <td>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</td>
                         <td>$ 15000</td>
@@ -70,12 +71,14 @@
                         <td>$ 15000</td>
                         <td><button class="btn whitesmoke black-text waves-effect waves-black" onclick=""><i class='material-icons'>search</i></button></td>    
                         <td><button class="btn yellow black-text waves-effect waves-black" onclick=""><i class='material-icons'>add_shopping_cart</i></button></td>    
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         <br>
         </div>
-        <div id="shoppingcart" class="center div-cart hide">
+        <br>
+        <br>
+        <div id="checkOut" class="center div-cart hide">
             <h5>CARRITO DE COMPRAS <span><i class="material-icons">shopping_cart</i></span></h5>
             <br>
             <table class="responsive-table highlight">
@@ -86,7 +89,7 @@
                         <th class="right">IMPORTE</th>
                     </tr>
                 </thead>
-                <tbody id="checkout">
+                <tbody id="grillaCursosComprados">
                     <!-- <tr>
                         <td>JAVASCRIPT</td>
                         <td>80 hs</td>
@@ -100,7 +103,7 @@
                 </tbody>
             </table>
             <table>
-                <tbody class="grey lighten-4 black-text" id="totales">
+                <tbody class="grey lighten-4 black-text" id="grillaTotalDeLaCompra">
                     <!-- <tr>
                         <td>SUBTOTAL</td>
                         <td class="right">27.500</td>
@@ -118,6 +121,8 @@
             <br>
             <button id="btnvolver" class="btn blue white-text waves-effect waves-light" onclick="volverAlListadoDeCursos()"><i class="material-icons align-top">chevron_left</i>volver a cursos</button>
             <button id="btnfinalizarcompra" class="btn green white-text waves-effect waves-light" onclick="confirmarCompra()"><i class="material-icons">check</i>finalizar compra</button>
+            <br>
+            <br>
         </div>
     </body>
 </html>

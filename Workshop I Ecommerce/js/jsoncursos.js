@@ -31,13 +31,14 @@ let CURSOS = [
     "horas": "120 hs",
     "precio": 21500
     }
-]
-/*,
-{
-    "cursoid": 5,
-    "nombre": "FIREBASE",
-    "imagen": "",
-    "descripcion": "Firebase se ha convertido en la Plataforma Cloud más fácil de aprender e integrar en proyectos web y mobile. Preparamos este curso para que aprendas a moverte ágilmente en Firebase y que puedas sacar provecho de tus desarrollos, con este monumental backend lleno de opciones útiles.",
-    "horas": "20 hs",
-    "precio": 26000
-    }*/
+]    
+//     ,
+//     {
+//     "cursoid": 5,
+//     "nombre": "FIREBASE",
+//     "imagen": "",
+//     "descripcion": "Firebase se ha convertido en la Plataforma Cloud más fácil de aprender e integrar en proyectos web y mobile. Preparamos este curso para que aprendas a moverte ágilmente en Firebase y que puedas sacar provecho de tus desarrollos, con este monumental backend lleno de opciones útiles.",
+//     "horas": "20 hs",
+//     "precio": 26000
+//     }
+// ]
