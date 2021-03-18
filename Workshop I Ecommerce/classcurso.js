@@ -21,10 +21,19 @@ class Curso {
                              </tr>`
                 return htmlCURSOS
             }
+
         }
 
         this.calculoTotalCarrito = () => {
-            
+            debugger
+            let total = 0
+            for (let item of carrito) {
+                let r = jsonCURSOS.find(c => c.cursoid == item)
+                    if (r != undefined) {
+                        total += parseInt(r.precio)
+                    }
+            }
+            return total
         }
     }
 }
