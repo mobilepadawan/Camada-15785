@@ -1,0 +1,39 @@
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: x-large;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+p, span {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: medium;
+}
+
+.margin-2 {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.div-margins {
+    padding: 3em;
+}
+
+.div-cart {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.whitesmoke {
+    background-color: whitesmoke !important;
+}
