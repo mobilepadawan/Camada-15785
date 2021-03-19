@@ -4,6 +4,7 @@ let carrito = [] //mi carrito de compras
 const jsonCHECKOUT = [] //mi checkout de compra
 const btnVerCarrito = document.getElementById("btnVerCarrito")
 const btnVolver = document.getElementById("btnVolver")
+const btnfinalizarcompra = document.getElementById("btnfinalizarcompra")
 const grillaDeCursos = document.getElementById("grillaDeCursos")
 const cursosEnCarrito = document.getElementById("cursosEnCarrito")
 const grillaDetalleCheckOut = document.getElementById("grillaDetalleCheckOut")
@@ -90,7 +91,7 @@ const finalizarCompra = () => {
 document.addEventListener("DOMContentLoaded", cargoCursos)
 btnVerCarrito.addEventListener("click", armoCheckOut)
 btnVolver.addEventListener("click", alternarListadoCursosCheckout)
-btn
+btnfinalizarcompra.addEventListener("click", finalizarCompra)
 
 const guardoCarrito = () => {
     if (carrito.length > 0)
