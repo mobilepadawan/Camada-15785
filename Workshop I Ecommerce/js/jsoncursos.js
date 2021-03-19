@@ -1,4 +1,27 @@
-let CURSOS = [
+const DESCUENTO = [
+    {
+        total: 0,
+        factor: 1 //SIN DESCUENTO
+    },
+    {
+        total: 1,
+        factor: 0.90 //10% OFF
+    },
+    {
+        total: 2,
+        factor: 0.85 //15% OFF
+    },
+    {
+        total: 3,
+        factor: 0.80 //20% OFF
+    },
+    {
+        total: 4,
+        factor: 0.75 //25% OFF
+    }
+]
+
+const CURSOS = [
     {
     "cursoid": 1,
     "nombre": "JAVASCRIPT",
@@ -31,13 +54,21 @@ let CURSOS = [
     "horas": "120 hs",
     "precio": 21500
     }
-]    
-//     ,
+]
+// ,
 //     {
 //     "cursoid": 5,
 //     "nombre": "FIREBASE",
 //     "imagen": "",
 //     "descripcion": "Firebase se ha convertido en la Plataforma Cloud más fácil de aprender e integrar en proyectos web y mobile. Preparamos este curso para que aprendas a moverte ágilmente en Firebase y que puedas sacar provecho de tus desarrollos, con este monumental backend lleno de opciones útiles.",
+//     "horas": "20 hs",
+//     "precio": 26000
+//     },
+//     {
+//     "cursoid": 6,
+//     "nombre": "REACT",
+//     "imagen": "",
+//     "descripcion": "La estrella en el mundo del desarrollo web, React, llega a tí a través de este fabuloso curso. Capacítate en la herramienta más demandada en el mercado de hoy, y está listo para afrontar los desarrollos web modernos, quedando a un paso de los desarrollos nativos, de la mano de REACT NATIVE.",
 //     "horas": "20 hs",
 //     "precio": 26000
 //     }
