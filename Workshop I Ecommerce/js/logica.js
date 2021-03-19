@@ -1,4 +1,5 @@
 //DECLARO VARIABLES
+let curso = ""
 let carrito = [] //mi carrito de compras
 const jsonCHECKOUT = [] //mi checkout de compra
 const btnVerCarrito = document.getElementById("btnVerCarrito")
@@ -10,7 +11,7 @@ const ofertaDeCursos = document.getElementById("ofertaDeCursos")
 const checkOut = document.getElementById("checkOut")
 
 //INSTANCIO EL OBJETO
-let curso = new Curso(carrito)
+curso = new Curso(carrito)
 
 let cargoCursos = () => {
     grillaDeCursos.innerHTML = ""
@@ -25,6 +26,7 @@ let cargoCursos = () => {
                     grillaDeCursos.innerHTML += fila
                 }
             recuperoCarrito()
+            curso = new Curso(carrito)
 }
 
 let agregoCursoAlCarrito = (id) => {
@@ -88,7 +90,8 @@ btnVerCarrito.addEventListener("click", armoCheckOut)
 btnVolver.addEventListener("click", alternarListadoCursosCheckout)
 
 const guardoCarrito = () => {
-    localStorage.carrito = JSON.stringify(carrito)
+    if (carrito.length > 0)
+        localStorage.carrito = JSON.stringify(carrito)
 }
 
 const recuperoCarrito = () => {
