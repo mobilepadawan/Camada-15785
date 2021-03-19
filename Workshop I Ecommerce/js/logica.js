@@ -81,9 +81,12 @@ const alternarListadoCursosCheckout = () => {
 }
 
 const finalizarCompra = () => {
+    debugger
+    alert("Muchas gracias por su compra!")
     setTimeout(() => {
         carrito = [] //vaciamos el carrito
         localStorage.clear() //limpiamos localStorage
+        actualizoCarrito() //actualizo carrito en pantalla
         alternarListadoCursosCheckout() //restauramos la lista de cursos
     }, 2500);
 }
