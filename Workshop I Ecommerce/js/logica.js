@@ -10,7 +10,6 @@ const grillaDetalleCheckOut = document.getElementById("grillaDetalleCheckOut")
 const ofertaDeCursos = document.getElementById("ofertaDeCursos")
 const checkOut = document.getElementById("checkOut")
 
-//INSTANCIO EL OBJETO
 curso = new Curso(carrito)
 
 let cargoCursos = () => {
@@ -32,7 +31,8 @@ let cargoCursos = () => {
 let agregoCursoAlCarrito = (id) => {
     let r = CURSOS.find(c => c.cursoid == id)
         carrito.push(r)
-        console.log("Se agregó al carrito " + console.table(r))
+        console.log("Se agregó al carrito 👇")
+        console.table(r)
         actualizoCarrito()
         guardoCarrito()
 }
@@ -79,15 +79,18 @@ const alternarListadoCursosCheckout = () => {
     checkOut.classList.toggle("hide")
 }
 
-// const finalizarCompra = () => {
-//     setTimeout(() => {
-        
-//     }, 2500);
-// }
+const finalizarCompra = () => {
+    setTimeout(() => {
+        carrito = [] //vaciamos el carrito
+        localStorage.clear() //limpiamos localStorage
+        alternarListadoCursosCheckout() //restauramos la lista de cursos
+    }, 2500);
+}
 
 document.addEventListener("DOMContentLoaded", cargoCursos)
 btnVerCarrito.addEventListener("click", armoCheckOut)
 btnVolver.addEventListener("click", alternarListadoCursosCheckout)
+btn
 
 const guardoCarrito = () => {
     if (carrito.length > 0)
