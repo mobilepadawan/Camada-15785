@@ -1,15 +1,12 @@
 let nombre = document.getElementById("nombre")
 let fnac = document.getElementById("fnac")
 let email = document.getElementById("email")
+let btnEnviar = document.getElementById("btnEnviar")
 let datosDeForm = {nombre: "", fecha: "", email: ""}
 
-function foco(campo) {
-   campo.style.backgroundColor = "greenyellow"
-}
+function foco(campo) {campo.style.backgroundColor = "greenyellow"}
 
-function normal(campo) {
-   campo.style.backgroundColor = "white"
-}
+function normal(campo) {campo.style.backgroundColor = "white"}
 
 nombre.addEventListener("focus", () => foco(nombre))
 fnac.addEventListener("focus", () => foco(fnac))
@@ -36,23 +33,17 @@ email.addEventListener("keyup", () => capturoTecla(event))
 
 const capturoTecla = (e) => {
    console.log(e)
-   if (e.key == "Enter") {
-      console.log("entré")
-   }   
+   // if (e.key == "Enter") {
+   // }   
 }
 
-var btnenviar = document.getElementById("enviar")
 
-window.addEventListener("offline", () => sinred())
-
-window.addEventListener("online", () => conred())
-
-function sinred() {
+window.addEventListener("offline", () => { //sin internet
    console.error("Se cayó internet X(")
-   btnenviar.classList.add("disabled")
-}
+   btnEnviar.classList.add("disabled")
+})
 
-function conred() {
-      console.warn("Volvio internet =)")
-      btnenviar.classList.remove("disabled")
-}
+window.addEventListener("online", () => {//volvió internet
+   console.warn("Volvio internet =)")
+   btnEnviar.classList.remove("disabled")
+})
