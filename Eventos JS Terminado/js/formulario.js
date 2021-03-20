@@ -30,11 +30,15 @@ const guardoDatosCargados = () => {
       localStorage.datosDeForm = JSON.stringify(datosDeForm)   
 }
 
+nombre.addEventListener("keyup", () => capturoEnter(event))
+fnac.addEventListener("keyup", () => capturoEnter(event))
+email.addEventListener("keyup", () => capturoEnter(event))
+
 const capturoEnter = (e) => {
    console.log(e)
-   if (e.keyCode == 13) {
+   if (e.key == "Enter") {
       console.log("entré")
-      document.body.nextElementSibling.focus()
+      
    }   
 }
 
