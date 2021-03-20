@@ -1,0 +1,12 @@
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    color: grey;
+    /* background-color: white; */
+}
+
+div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
