@@ -2,6 +2,8 @@ let titulo = document.getElementById("titulo")
 let imagen = document.getElementById("imagen")
 let progreso = document.getElementById("progreso")
 let botonProgreso = document.getElementById("botonProgreso")
+let mp3Page = document.getElementById("mp3Page")
+
 
 function aplicoColor() {
     let colorActual = document.body.bgColor

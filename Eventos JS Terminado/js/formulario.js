@@ -20,7 +20,7 @@ nombre.addEventListener("change", () => {guardoDatosCargados()})
 fnac.addEventListener("change", () => {guardoDatosCargados()})
 email.addEventListener("change", () => {guardoDatosCargados()})
 
-const guardoDatosCargados = () => {
+const guardoDatosCargados = () => { //cuando se ejecuta CHANGE, llama a esta función,arma el JSON y lo guarda en LocalStorage
       datosDeForm.nombre = nombre.value 
       datosDeForm.fecha = fnac.value
       datosDeForm.email = email.value 

@@ -1,4 +1,4 @@
-class Curso {
+class Curso { 
     constructor(carritoCursos) {
         let carrito = carritoCursos
 
