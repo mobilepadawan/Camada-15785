@@ -30,15 +30,14 @@ const guardoDatosCargados = () => {
       localStorage.datosDeForm = JSON.stringify(datosDeForm)   
 }
 
-nombre.addEventListener("keyup", () => capturoEnter(event))
-fnac.addEventListener("keyup", () => capturoEnter(event))
-email.addEventListener("keyup", () => capturoEnter(event))
+nombre.addEventListener("keyup", () => capturoTecla(event))
+fnac.addEventListener("keyup", () => capturoTecla(event))
+email.addEventListener("keyup", () => capturoTecla(event))
 
-const capturoEnter = (e) => {
+const capturoTecla = (e) => {
    console.log(e)
    if (e.key == "Enter") {
       console.log("entré")
-      
    }   
 }
 
@@ -47,8 +46,6 @@ var btnenviar = document.getElementById("enviar")
 window.addEventListener("offline", () => sinred())
 
 window.addEventListener("online", () => conred())
-
-
 
 function sinred() {
    console.error("Se cayó internet X(")
