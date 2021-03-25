@@ -4,38 +4,25 @@ class cotizadorSeguroDeHogar {
         let tipoVivienda = jsonTIPOVIVIENDA
         let costoM2 = costoSeguroM2
         let metrosCuadradosIngresados = metros2
-        this.areaResidenciaElegida = residenciaElegida
-        this.tipoViviendaElegida = viviendaElegida
+        let areaResidenciaElegida = residenciaElegida
+        let tipoViviendaElegida = viviendaElegida
         this.calculoCobertura = function() { //Obtenemos el precio de la cuota en bruto
             return (costoM2 * metrosCuadradosIngresados)
         }
         this.factorArea = function() {
-            let far = 1
-            for (let i in areaResidencia) {
-                if (this.areaResidenciaElegida == areaResidencia[i].area) {
-                    far = areaResidencia[i].factor
-                    break
-                }
-            }
-            return far
+            let r = areaResidencia.find(r => r.area == areaResidenciaElegida)
+                return r.factor
         }
         this.factorVivienda = function() {
-            let fv = 1
-            for (let i in tipoVivienda) {
-                if (this.tipoViviendaElegida == tipoVivienda[i].tipo) {
-                    fv = tipoVivienda[i].factor
-                    break
-                }
-            }
-            return fv
+            let r = tipoVivienda.find(r => r.tipo == tipoViviendaElegida)
+                return r.factor
         }
         this.calculoCuota = function() {
             let valorDeCuota = this.calculoCobertura() * this.factorArea() * this.factorVivienda()
-                if (typeof valorDeCuota != "number") {
+                if (typeof valorDeCuota != "number")
                     valorDeCuota = 0.00
-                }
                 return valorDeCuota.toFixed(2)
-            }
+        }
     }
 }
 //Creamos nuestra clase Cotizador de seguro de hogar
