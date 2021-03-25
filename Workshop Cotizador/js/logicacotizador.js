@@ -4,8 +4,8 @@
 function cargoElementoSelect(combo, arrayElementos) {
     if (arrayElementos.length > 0) {
         let elementos = ""
-            for (i in arrayElementos) {
-                elementos += "<option>" + arrayElementos[i] + "</option>"
+            for (let elemento on arrayElementos) {
+                elementos += "<option>" + arrayElementos + "</option>"
             }
             combo.innerHTML = elementos
     }
