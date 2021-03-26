@@ -10,29 +10,23 @@
         <link rel="stylesheet" href="css/estilos.css">
         <script defer src="js/parametros.js"></script>
         <script defer src="js/variables.js"></script>
-        <!-- <script defer src="js/objetocotizador.js"></script>
-        <script defer src="js/logicacotizador.js"></script> -->
-    </head>
+        <script defer src="js/objetocotizador.js"></script>
+        <script defer src="js/logicacotizador.js"></script>
+    </head> 
     <body>
-        <div id="presupuestador" class="center blue lighten-4 div-wide z-depth-4" width="70%">
+        <div class="center blue lighten-4 div-wide z-depth-4" width="70%">
             <span><i class="material-icons large">home</i><h5>PRESUPUESTADOR SEGURO DE HOGAR</h5></span>
             <p>Con unas pocas preguntas, conseguirá rápidamente cotizar el mejor seguro de hogar, que se ajuste a sus necesidades.</p>
-            <div id="divCotizar" class="yellow lighten-3 div-wide-inside top-margin-minimum z-depth-2">
+            <div class="yellow lighten-3 div-wide-inside top-margin-minimum z-depth-2">
                 <h6>Seleccione la información que mejor se ajusta a su vivienda.</h6>
                 <p class="left element-border-apart">AREA DE RESIDENCIA</p>
                     <select class="browser-default" id="areaResidencia">
-                        <option>CABA</option>
-                        <option>La Plata</option>
-                        <option>Tandil</option>
-                        <option>Costa Atlántica</option>
+
                     </select>
                 <br>
                 <p class="left element-border-apart">TIPO DE VIVIENDA</p>
                     <select class="browser-default" id="tipoVivienda">
-                        <option>Casa</option>
-                        <option>PH</option>
-                        <option>Edificio Departamento</option>
-                        <option>En barrio privado</option>
+
                     </select>
                 <br>
                 <table>
@@ -53,7 +47,7 @@
                 </div>
                 <br>
                 <div id="obtenerCotizacion">
-                    <h5>Costo de cuota mensual estimado: <span id="importeCuota" class="blue-text"><strong>$ 0.00</strong></span></h5>
+                    <h5>Costo de cuota mensual estimado: <span class="blue-text"><strong id="importeCuota">$ 0.00</strong></span></h5>
                 </div>
                 <br>
             </div>
