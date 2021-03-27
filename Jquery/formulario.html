@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script defe src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <link rel="stylesheet" href="css/estilos.css">
         <script src="js/jquery-3.6.0.min.js"></script>
     </head> 
@@ -26,4 +26,36 @@
          </div>
        </div>
     </body>
-    </html>
+</html>
+<!-- 
+
+<script>
+  const jsonTIPOVIVIENDA = [{"tipo": "Casa", "factor": 1.05},
+                          {"tipo": "P.H.", "factor": 1.01},
+                          {"tipo": "Edificio Departamento", "factor": 1.00},
+                          {"tipo": "Barrio Privado", "factor": 1.12}]
+
+let divViviendas = document.getElementById("divViviendas")
+for (let vivienda of jsonTIPOVIVIENDA) {
+    let fila = `<p>${vivienda.tipo}</p>`
+        divViviendas.innerHTML += fila
+}
+
+let respuesta = jsonTIPOVIVIENDA.filter(v => v.tipo == "P.H.")
+respuesta.tipo
+respuesta.factor 
+
+let casa = document.getElementById("casa")
+let factor = document.getElementById("factor")
+
+function agregarViviendas() {
+    let nuevaVivienda = {tipo:"", factor: ""}
+        nuevaVivienda.tipo = casa.value
+        nuevaVivienda.factor = factor.value 
+        jsonTIPOVIVIENDA.push(nuevaVivienda)
+}
+
+</script>
+
+<input type="text" id="casa">
+<input type="number" id="factor"> -->
