@@ -33,17 +33,17 @@ $(() => {
     fechanac.on("blur", ()=> {pierdoFoco(fechanac)})
 
     //Intentar activar listeners de forma dinámica
-    const vInputs = document.getElementsByTagName("input")
+/*     const vInputs = document.getElementsByTagName("input")
     
     for (let i of vInputs) {
         debugger
         if (i.type != "submit")
             i.addEventListener("focus", ()=> {console.log("Se activó el listener para focus")})
     }
-
+ */
     //CICLO FOR OF SOBRE SELECTORES JQUERY
     const inputs = $(":input").not(":input[type=submit]")
-debugger
+    debugger
     for (let i of inputs) {
         console.log(i)
         $(i).on("focus", ()=> {
