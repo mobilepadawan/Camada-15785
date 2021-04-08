@@ -41,13 +41,13 @@ $(() => {
             i.addEventListener("focus", ()=> {console.log("Se activó el listener para focus")})
     }
 
-    //CICLO FOR DE VANILLA JS NO FUNCIONA SOBRE SELECTORES JQUERY
+    //CICLO FOR OF SOBRE SELECTORES JQUERY
     const inputs = $(":input").not(":input[type=submit]")
 debugger
     for (let i of inputs) {
         console.log(i)
         $(i).on("focus", ()=> {
-            console.log(`Input ${i} activó su listener`)
+            console.log(`El Input ${i} activó su listener`)
         })
     }
 
