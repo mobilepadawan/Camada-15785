@@ -30,10 +30,8 @@ $("#contenido").append("<p>Este contenido lo genero automáticamente desde JQuer
 //     const enviar = $(":submit")
 //         enviar.click(function(e) {
 //             e.preventDefault()
-//             let r = guardoUsuario()
-//                 if (r) {
-//                     inputs.val("") //Limpio los campos de una sola vez, aprovechando la constante INPUTS
-//                 }
+//              if (guardoUsuario())
+//                  inputs.vale("") //limpio los campos de una sola vez, aprovechando la constante 'inputs'
 //         })
 
 //     const guardoUsuario = ()=> {
