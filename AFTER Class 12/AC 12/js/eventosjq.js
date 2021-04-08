@@ -38,17 +38,18 @@ $(() => {
     for (let i of vInputs) {
         debugger
         if (i.type != "submit")
-            i.addEventListener("focus", ()=> console.log("Se activó el listener para focus"))
+            i.addEventListener("focus", ()=> {console.log("Se activó el listener para focus")})
     }
 
     //CICLO FOR DE VANILLA JS NO FUNCIONA SOBRE SELECTORES JQUERY
     const inputs = $(":input").not(":input[type=submit]")
-
-    // for (let i of inputs) {
-    //     i.on("focus", ()=> {
-    //         console.log(`Input ${i} activó su listener`)
-    //     })
-    // }
+debugger
+    for (let i of inputs) {
+        console.log(i)
+        $(i).on("focus", ()=> {
+            console.log(`Input ${i} activó su listener`)
+        })
+    }
 
     //SHORCUTS
     //const enviar = $("form") //OTRA ALTERNATIVA
