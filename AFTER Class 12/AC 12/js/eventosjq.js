@@ -27,10 +27,11 @@ $(() => {
     }
 
     const enviar = $(":submit")
-        enviar.click(function(e) {
-            e.preventDefault()
+        enviar.click(function() {
+            // e.preventDefault()
              if (guardoUsuario())
-                 inputs.val("") //limpio los campos de una sola vez, aprovechando la constante 'inputs'
+                console.warn("Usuario guardado con éxito.")
+            //     inputs.val("") //limpio los campos de una sola vez, aprovechando la constante 'inputs'
         })
 
     const guardoUsuario = ()=> {
