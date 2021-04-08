@@ -27,12 +27,16 @@ $(() => {
     }
 
     const enviar = $(":submit")
-        enviar.click(function() {
-            // e.preventDefault()
+
+        enviar.on("submit", ()=> {
+            if (guardoUsuario())
+            console.warn("Usuario guardado con éxito.")
+        })
+
+/*         enviar.click(function() {
              if (guardoUsuario())
                 console.warn("Usuario guardado con éxito.")
-            //     inputs.val("") //limpio los campos de una sola vez, aprovechando la constante 'inputs'
-        })
+        }) */
 
     const guardoUsuario = ()=> {
         let nuevoUsuario = {usuario: nombre.val(), edad: edad.val(), fechanac: fechanac.val()}
