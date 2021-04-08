@@ -21,34 +21,26 @@ $(() => {
     }
 
     const pierdoFoco = (campo)=> {
+        debugger
         campo.removeClass("yellow lighten-4")
     }
 
     //Inicializo los eventos para que disparen la función correspondiente
-    nombre.on("focus", ()=> {reciboFoco(nombre)})
-    nombre.on("blur", ()=> {pierdoFoco(nombre)})
-    edad.on("focus", ()=> {reciboFoco(edad)})
-    edad.on("blur", ()=> {pierdoFoco(edad)})
-    fechanac.on("focus", ()=> {reciboFoco(fechanac)})
-    fechanac.on("blur", ()=> {pierdoFoco(fechanac)})
 
     //Intentar activar listeners de forma dinámica
 /*     const vInputs = document.getElementsByTagName("input")
-    
-    for (let i of vInputs) {
-        debugger
-        if (i.type != "submit")
-            i.addEventListener("focus", ()=> {console.log("Se activó el listener para focus")})
-    }
+             for (let i of vInputs) {
+                 debugger
+                 if (i.type != "submit")
+                     i.addEventListener("focus", ()=> {console.log("Se activó el listener para focus")})
+             }
  */
     //CICLO FOR OF SOBRE SELECTORES JQUERY
     const inputs = $(":input").not(":input[type=submit]")
-    debugger
     for (let i of inputs) {
-        console.log(i)
-        $(i).on("focus", ()=> {
-            console.log(`El Input ${i} activó su listener`)
-        })
+        //Como son dos eventos, los encadenamos dentro del mismo selector para acotar líneas de código
+        $(i).on("focus", ()=> {reciboFoco($(i))})
+            .on("blur", ()=> {pierdoFoco($(i))})
     }
 
     //SHORCUTS
@@ -60,7 +52,7 @@ $(() => {
         e.preventDefault()
         let r = guardoUsuario()
             if (r) {
-                $(":input").val("") //Limpio los campos de una sola vez
+                inputs.val("") //Limpio los campos de una sola vez, aprovechando la constante INPUTS
             }
     })
 
