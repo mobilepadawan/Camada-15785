@@ -32,6 +32,24 @@ $(() => {
     fechanac.on("focus", ()=> {reciboFoco(fechanac)})
     fechanac.on("blur", ()=> {pierdoFoco(fechanac)})
 
+    //Intentar activar listeners de forma dinámica
+    const vInputs = document.getElementsByTagName("input")
+    
+    for (let i of vInputs) {
+        debugger
+        if (i.type != "submit")
+            i.addEventListener("focus", ()=> console.log("Se activó el listener para focus"))
+    }
+
+    //CICLO FOR DE VANILLA JS NO FUNCIONA SOBRE SELECTORES JQUERY
+    const inputs = $(":input").not(":input[type=submit]")
+
+    // for (let i of inputs) {
+    //     i.on("focus", ()=> {
+    //         console.log(`Input ${i} activó su listener`)
+    //     })
+    // }
+
     //SHORCUTS
     //const enviar = $("form") //OTRA ALTERNATIVA
     const enviar = $(":submit")
