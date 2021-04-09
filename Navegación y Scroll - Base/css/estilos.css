@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Roboto");
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.ancho {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.margen-interno {
+    padding: 3%; 
+}
+
+.margenes-laterales {
+    padding-left: 2%;
+    padding-right: 2%;
+}
