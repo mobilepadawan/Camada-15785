@@ -1,6 +1,6 @@
 $(document).ready(()=> {
     $("#titulo").show("slow", ()=> {
-        $.getJSON("js/coderflix.json", function(response, status) {
+        $.getJSON("js/coderflix.json", (response, status)=> {
             if (status === "success") {
                 let contenido = response
                     for (const film of contenido) {
