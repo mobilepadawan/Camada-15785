@@ -8,7 +8,7 @@ const cantidadPlazas = $("#cantidad")
 // $("h1").css({"font-size": "30px", "color": "yellow", "text-decoration": "underline"})
 // $("h1").css("font-size", "30px")
 
-// "[{"pid":1,"producto":"Curso JavaScript","cantidad":90},{"pid":2,"producto":"Curso React","cantidad":100},{"pid":3,"producto":"Curso Node JS","cantidad":120},{"pid":4,"producto":"Curso PHP Backend","cantidad":90},{"pid":5,"producto":"Curso de QBasic","cantidad":50},{"pid":7,"producto":"Curso de Visual Basic 6","cantidad":80},{"pid":7,"producto":"Curso de C++","cantidad":50},{"pid":8,"producto":"Curso de Pascal","cantidad":40},{"pid":9,"producto":"Curso de QBasic","cantidad":60},{"pid":10,"producto":"Curso de Borland Delphi","cantidad":50}]"
+// "[{"pid":1,"producto":"Curso JavaScript","cantidad":90},{"pid":2,"producto":"Curso React","cantidad":100},{"pid":3,"producto":"Curso Node JS","cantidad":120},{"pid":4,"producto":"Curso PHP Backend","cantidad":90},{"pid":5,"producto":"Curso de SQL Server","cantidad":50}]"
 
 const creoFilaProducto =(producto) => {
     const fid = (`fila${producto.pid}`).trim() //Creo un atributo ID dinámico para <tr>
