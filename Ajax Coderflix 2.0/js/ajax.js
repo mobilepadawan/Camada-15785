@@ -26,7 +26,7 @@ const cargoCard = (film) => {
         let movieOrSerie = `<p class="yellow-text">TEMPORADAS: <span class="white-text">${film.temporadas}</span></p>`
             if (film.temporadas == "N/A")
                 movieOrSerie = `<p class="yellow-text">DURACIÓN: <span class="white-text">${film.temporadas}</span></p>`
-            let card = `<div class="col s12 m6 l3">
+            let card = `<div class="col s12 m6 l4">
                             <div class="card z-depth-2">
                                 <div class="card-image">
                                 <img src="${film.poster}">
