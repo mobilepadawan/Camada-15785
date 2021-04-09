@@ -4,10 +4,6 @@ function desplazarMe(titulo) {
    }, 1000)
 }
 
-$('#link2').click(function() {
-   desplazarMe("titulo2")
-})
+$('#link2').click(function() {desplazarMe("titulo2")})
 
-$('#link3').click(function() {
-   desplazarMe("titulo3")
-})
+$('#link3').click(function() {desplazarMe("titulo3")})
