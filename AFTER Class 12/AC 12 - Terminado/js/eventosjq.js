@@ -1,11 +1,6 @@
-//CUALQUIERA DE ESTAS VERSIONES FUNCIONA CORRECTAMENTE
-// $(document).ready(function() {})       // $((function() {})        // $(()=> {})
-let usuarios = []
-$("#contenido").append("<p>Este contenido lo genero automáticamente desde JQuery.</p>")
 $(() => {
     $("#contenido").append("<p>Este contenido lo genero automáticamente desde JQuery.</p>")
 
-    //MANEJO DE FORMULARIOS CON ON
     const nombre = $("#nombre")
     const edad = $("#edad")
     const fechanac = $("#fechanac")
@@ -20,23 +15,18 @@ $(() => {
     }
 
     const inputs = $(":input").not(":input[type=submit]") //CICLO FOR OF SOBRE SELECTORES JQUERY
-    for (let i of inputs) {
-        //Como son dos eventos, los encadenamos dentro del mismo selector para acotar líneas de código
-        $(i).on("focus", ()=> {reciboFoco($(i))})
-            .on("blur", ()=> {pierdoFoco($(i))})
+    for (let i of inputs) { //Como son dos eventos, los encadenamos dentro del mismo selector para acotar líneas de código
+        $(i).on("focus", ()=> {reciboFoco($(i))}).on("blur", ()=> {pierdoFoco($(i))})
     }
 
     const enviar = $(":submit")
 
-        enviar.on("submit", ()=> {
+        enviar.click(function(e) {
+            e.preventDefault()
             if (guardoUsuario())
             console.warn("Usuario guardado con éxito.")
-        })
-
-/*         enviar.click(function() {
-             if (guardoUsuario())
-                console.warn("Usuario guardado con éxito.")
-        }) */
+            inputs.val("")
+        }) 
 
     const guardoUsuario = ()=> {
         let nuevoUsuario = {usuario: nombre.val(), edad: edad.val(), fechanac: fechanac.val()}
