@@ -12,3 +12,8 @@ body {
 .margen-interno {
     padding: 3%; 
 }
+
+.margenes-laterales {
+    padding-left: 2%;
+    padding-right: 2%;
+}
