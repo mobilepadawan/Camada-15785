@@ -4,7 +4,7 @@ let contenidoJSON = ""
 
 function cargoContenidoStreaming() {
    $.ajax({
-      url: 'https://randomuser.me/api/?results=70&nat=es&gender=female',
+      url: 'https://randomuser.me/api/?results=100',
       dataType: 'json',
       success: function(data) {
          contenidoJSON = data.results
@@ -40,5 +40,10 @@ setTimeout(() => {
       })
 }, 100)
 
-/* https://randomuser.me/
-https://randomuser.me/documentation#howto */
+/*
+
+https://randomuser.me/
+https://randomuser.me/documentation#howto
+70&nat=es&gender=female
+
+*/

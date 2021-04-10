@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CODERFLIX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/detalle.js"></script>
+  </head> 
+  <body class="black">
+    <div class="center" id="encabezado">
+        <h1 style="display: none;" class="red-text"><strong>CODERFLIX</strong></h1>
+        <h4 style="display: none;" class="white-text">Información de contenido</h4>
+        <br>
+        <button style="display: none;" class="btn black red-text waves-effect waves-red">VOLVER</button>
+        <br>
+    </div>
+    <div id="contenido" class="row center" style="display: none;" >
+      <!--Aquì se carga el detalle, desde LocalStorage -->
+    </div>
+    <div class="center" id="trailer" style="display: none;">
+            <!-- Solo aparece algo acá, si tiene tráiler asociado -->
+    </div>
+</body>
+</html>
