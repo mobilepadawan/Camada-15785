@@ -3,8 +3,6 @@ const tableBody = $("tbody")
 const productoDesc = $("#descripcion")
 const cantidadPlazas = $("#cantidad")
 
-$("h1").css({"font-size": "30px", "color": "yellow", "text-decoration": "underline"})
-
 // "[{"pid":1,"producto":"Curso JavaScript","cantidad":90},{"pid":2,"producto":"Curso React","cantidad":100},{"pid":3,"producto":"Curso Node JS","cantidad":120},{"pid":4,"producto":"Curso PHP Backend","cantidad":90},{"pid":5,"producto":"Curso de SQL Server","cantidad":50}]"
 
 const creoFilaProducto =(producto) => {
