@@ -1,15 +1,17 @@
 let productos = []
 const tableBody = $("tbody")
 const productoDesc = $("#descripcion")
+const fechaInicio = $("#fechainicio")
 const cantidadPlazas = $("#cantidad")
 
-// "[{"pid":1,"producto":"Curso JavaScript","cantidad":90},{"pid":2,"producto":"Curso React","cantidad":100},{"pid":3,"producto":"Curso Node JS","cantidad":120},{"pid":4,"producto":"Curso PHP Backend","cantidad":90},{"pid":5,"producto":"Curso de SQL Server","cantidad":50}]"
+// [{"pid":1,"producto":"Curso JavaScript","fechainicio":"2021-05-01","cantidad":90},{"pid":2,"producto":"Curso React","fechainicio":"2021-05-01","cantidad":100},{"pid":3,"producto":"Curso Node JS","fechainicio":"2021-05-01","cantidad":120},{"pid":4,"producto":"Curso PHP Backend","fechainicio":"2021-05-01","cantidad":90},{"pid":5,"producto":"Curso de SQL Server","fechainicio":"2021-05-01","cantidad":50}]
 
 const creoFilaProducto =(producto) => {
     const fid = (`fila${producto.pid}`).trim() //Creo un atributo ID dinámico para <tr>
     const fila = `<tr id="${fid} style="display: none;">
                      <td>${producto.pid}</td>
                      <td>${producto.producto}</td>
+                     <td>${producto.fechainicio}</td>
                      <td class="right">${producto.cantidad}</td>
                      <td class="center"><button onclick="eliminarFilaYproducto('${fid}', ${producto.pid})" class="btn-small btn-floating red waves-effect waves-light"><i class="material-icons">delete</i></button></td>
                  </tr>`
@@ -24,6 +26,7 @@ const agregarProducto =()=> {
         const nuevoProducto = {
                                 pid: generoID(), 
                                 producto: productoDesc.val(),
+                                fechainicio: fechainicio.val(),
                                 cantidad: Number(cantidadPlazas.val())
                               }
         productos.push(nuevoProducto)
