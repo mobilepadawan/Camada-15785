@@ -9,7 +9,7 @@ const routes = [
                 ]
 
 const ErrorComponent = (padre) => {
-   const msjError = `<div class="center red white-text borde-interior">
+   const msjError = `<div class="center red white-text borde-interior z-depth-4">
                         <h2>Error 404</h2>
                         <p>La página solicitada no se encuentra disponible.</p>
                         <i class="material-icons large">sentiment_very_dissatisfied</i>
