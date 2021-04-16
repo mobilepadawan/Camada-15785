@@ -3,51 +3,49 @@ class Producto {
     //CONSTRUCTOR DE CLASE PRODUCTO
     constructor(data) {
         this.id = data.id
-        this.nombre = data.nombre.toUpperCase();
-        this.precio = parseFloat(data.precio);
-        this.vendido = false;
+        this.nombre = data.nombre.toUpperCase()
+        this.precio = parseFloat(data.precio)
+        this.vendido = false
     }
     //MÉTODO PARA SUMAR IVA
     sumaIva() {
-        this.precio = this.precio * 1.21;
+        this.precio = this.precio * 1.21
     }
     //MÉTODO PARA VENDER EL PRODUCTO
     vender() {
-        this.vendido = true;
-    }
-}
-// MODELO PRODUCTO
-class ProductoModel {
-    //CONSTRUCTOR DEL MODELO PRODUCTO
-    constructor() {
-        //OBTENEMOS EL ARRAY DE PRODUCTOS PARSEANDO DESDE EL JSON SI EXISTE
-        const productos = JSON.parse(localStorage.getItem('productos')) || [];
-        //USAMOS MAP PARA CREAR UN NUEVO ARRAY DE OBJETOS DE TIPO PRODUCTO
-        this.productos = productos.map(producto => new Producto(producto));
-    }
-    //MÈTODO PARA GUARDAR EL ARRAY DE PRODUCTOS EN STORAGE
-    guardarProductos() {
-        localStorage.setItem('productos', JSON.stringify(this.productos));
-    }
-    //MÊTODO PARA AGREGAR UN PRODUCTO AL ARRAY DE PRODUCTOS
-    agregarProducto(producto) {
-        this.productos.push(new Producto(producto));
-        this.guardarProductos();
-    }
-    //MÊTODO PARA ELIMINAR UN PRODUCTO DEL ARRAY DE PRODUCTOS
-    eliminarProducto(id) {
-        this.productos = this.productos.filter(producto => producto.id !== id);
-        this.guardarProductos();
-    }
-    //MÊTODO PARA BUSCAR UN PRODUCTO DEL ARRAY DE PRODUCTOS
-    buscarProducto(id) {
-        return this.productos.find(producto => producto.id === id);
+        this.vendido = true
     }
 }
 
-// VIEW PRODUCTO
+class ProductoModel {
+    constructor() {
+        const productos = JSON.parse(localStorage.getItem('productos')) || []  //OBTENEMOS EL ARRAY DE PRODUCTOS PARSEANDO DESDE EL JSON SI EXISTE
+        this.productos = productos.map(producto => new Producto(producto))
+    }
+
+    guardarProductos() {
+        localStorage.setItem('productos', JSON.stringify(this.productos))
+    }
+
+    agregarProducto(producto) {
+        debugger
+        this.productos.push(new Producto(producto))
+        this.guardarProductos()
+        const propiedades = "green white-text"
+        M.toast({html: `Se agregó el producto '${producto.nombre}'`, classes: propiedades})
+    }
+
+    eliminarProducto(id) {
+        this.productos = this.productos.filter(producto => producto.id !== id)
+        this.guardarProductos()
+    }
+
+    buscarProducto(id) {
+        return this.productos.find(producto => producto.id === id)
+    }
+}
+
 class ProductoView {
-    //MÊTODO PARA CREAR LA VISTA DE AGREGAR PRODUCTO
     agregarProducto(padre, callback) {
         $(padre).html(` <section class="borde-interior center">
                             <br>
@@ -62,7 +60,7 @@ class ProductoView {
         `);
         $("#btnEnviar").click(callback);
     }
-    //MÊTODO PARA CREAR LA VISTA DE LISTADO DE PRODUCTOS
+
     listarProductos(padre, data, callback) {
         let html = '';
         for (const producto of data) {
@@ -76,37 +74,35 @@ class ProductoView {
         $(padre).html(html);
         $(".btnComprar").click(callback);
     }
-    //MÊTODO PARA CREAR LA VISTA DE BUSQUEDA DE PRODUCTO
+
     buscarProducto(padre, callback) {
-        $(padre).html(`
-            <section class="borde-interior center">
-                <h4>BUSCAR PRODUCTO</h4>
-                <input type ="number" placeholder="Ingrese el ID de producto">
-                <button id="btnBuscar" class="btn blue white-text">Buscar</button>
-            </section>
-        `);
+        $(padre).html(`<section class="borde-interior center">
+                         <h4>BUSCAR PRODUCTO</h4>
+                         <input type ="number" placeholder="Ingrese el ID de producto">
+                         <button id="btnBuscar" class="btn blue white-text">Buscar</button>
+                      </section>`);
         $("#btnBuscar").click(callback);
     }
 }
-// CONTROLLER PRODUCTO
+
 class ProductoController {
-    //CONSTRUCTOR DEL CONTROLADOR ASOCIANDO UN MODELO Y VISTA
     constructor(productoModel, productoView) {
         this.productoModel = productoModel;
         this.productoView = productoView;
     }
-    //MÊTODO PARA GENERAR CONSTROLAR LA VISTA, EL MODELO Y EL EVENTO AL AGREGAR UN PRODUCTO
+
     agregar(app) {
         this.productoView.agregarProducto(app, (event) => {
+            debugger
             let hijos = $(event.target).parent().children();
             this.productoModel.agregarProducto({
                 id: this.productoModel.productos.length + 1,
-                nombre: hijos[1].value,
-                precio: hijos[2].value,
+                nombre: hijos[4].value,
+                precio: hijos[7].value,
             });
         });
     }
-    //MÊTODO PARA GENERAR CONSTROLAR LA VISTA, EL MODELO Y EL EVENTO AL LISTAR PRODUCTOS
+
     listar(app) {
         this.productoView.listarProductos(app,
             this.productoModel.productos,
@@ -115,7 +111,7 @@ class ProductoController {
                 console.log(hijos[0].value);
             });
     }
-    //MÊTODO PARA GENERAR CONSTROLAR LA VISTA, EL MODELO Y EL EVENTO AL BUSCAR UN PRODUCTO
+
     buscar(app) {
         this.productoView.buscarProducto(app, (event) => {
             let hijos = $(event.target).parent().children();

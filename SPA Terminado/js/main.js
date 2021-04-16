@@ -1,11 +1,11 @@
 const app = new ProductoController(new ProductoModel(), new ProductoView());
 // LISTA DE RUTAS (ASOCIAR A CADA ACCION)
 const routes = [
-   {path: '', action: 'agregar' },
-   {path: '/', action: 'agregar' },
-   {path: '/pagina1', action: 'listar' },
-   {path: '/pagina2', action: 'buscar' }
-]
+                  {path: '', action: 'agregar' },
+                  {path: '/', action: 'agregar' },
+                  {path: '/pagina1', action: 'listar' },
+                  {path: '/pagina2', action: 'buscar' }
+                ]
 
 const ErrorComponent = (padre) => {
    const msjError = `<div class="center red white-text borde-interior">
@@ -13,7 +13,7 @@ const ErrorComponent = (padre) => {
                         <p>La página solicitada no se encuentra disponible.</p>
                         <i class="material-icons large">sentiment_very_dissatisfied</i>
                      </div>`
-   $(padre).html(msjError)
+         $(padre).html(msjError)
  }
 
 //OBTENER LA RUTA ACTUAL (USAMOS EL OBJETO LOCATION Y SU PROPIEDAD HASH). SI "" || '/'  ENTONCES parseLocation = '/'
