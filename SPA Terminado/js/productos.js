@@ -56,23 +56,21 @@ class ProductoView {
                             <input type="number" placeholder="Importe">
                             <br><br>
                             <button id="btnEnviar" class="btn green white-text waves-effect waves-light">ENVIAR</button>
-                        </section>
-        `);
-        $("#btnEnviar").click(callback);
+                        </section>`)
+        $("#btnEnviar").click(callback)
     }
 
     listarProductos(padre, data, callback) {
         let html = '';
         for (const producto of data) {
-            html += `<div>
-                        <input value="${producto.id}" type="hidden">
-                        <h4>  Producto: ${producto.nombre}</h4>
-                        <b> $ ${producto.precio}</b>
-                        <!-- <button class="btnComprar">Comprar</button> -->
-                    </div>`;
+            html += `<div id="${producto.id}">
+                           <h5>Producto: ${producto.nombre}</h5>
+                           <b>$ ${producto.precio}</b>
+                     </div>
+                     <br><br>`
         }
         $(padre).html(html);
-        $(".btnComprar").click(callback);
+        $(".btnComprar").click(callback)
     }
 
     buscarProducto(padre, callback) {
@@ -80,8 +78,8 @@ class ProductoView {
                          <h4>BUSCAR PRODUCTO</h4>
                          <input type ="number" placeholder="Ingrese el ID de producto">
                          <button id="btnBuscar" class="btn blue white-text">Buscar</button>
-                      </section>`);
-        $("#btnBuscar").click(callback);
+                      </section>`)
+        $("#btnBuscar").click(callback)
     }
 }
 
