@@ -63,7 +63,7 @@ class ProductoView {
     listarProductos(padre, data, callback) {
         let html = '';
         for (const producto of data) {
-            html += `<div id="${producto.id}">
+            html += `<div id="${producto.id}" class="borde-interior blue lighten-3 z-depth-2">
                            <h5>Producto: ${producto.nombre}</h5>
                            <b>$ ${producto.precio}</b>
                      </div>
