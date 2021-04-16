@@ -74,3 +74,45 @@ $(()=> {
     recuperarProductosDeLS()
     actualizoTablaProductos()
 })
+
+
+class ProductoModel {
+    constructor() {
+        const productos = JSON.parse(localStorage.getItem('cursos')) || []
+        this.productos = productos.map(producto => new ProductoModel(producto))
+    }
+
+    guardarProductos() {
+        localStorage.setItem('cursos', JSON.stringify(this.productos))
+    }
+
+    agregarProducto(producto) {
+        this.productos.push(new Producto(producto))
+        this.guardarProductos()
+    }
+}
+
+class ProductoView {
+    listarProductos(padre, data) {
+        let filasHtml = ''
+        for (const producto of data) {
+           filasHtml += `<tr id="${fid} style="display: none;">
+                            <td>${data.pid}</td>
+                            <td>${data.producto}</td>
+                            <td>${data.fechainicio}</td>
+                            <td class="right">${data.cantidad}</td>
+                            <td class="center"><button onclick="eliminarFilaYproducto('${fid}', ${data.pid})" class="btn-small btn-floating red waves-effect waves-light"><i class="material-icons">delete</i></button></td>
+                        </tr>`
+        }
+        $(padre).html(filasHtml)
+    }
+}
+
+class ProductoController {
+    constructor(productoModel, productoView) {
+        this.productoModel = productoModel
+        this.productoView = productoView
+        this.productoView.agregarProducto('')
+    }
+}
+
