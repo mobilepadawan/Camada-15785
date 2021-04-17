@@ -44,11 +44,11 @@ const router = () => {
    }
  }
 
- $(document).on('load', function()  {
+ $(document).on('load', ()=> {
    router()
  })
 
  //CADA VEZ QUE SE DETECTA UN CAMBIO EN EL HASH (EJEMPLO la URL CAMBIA DE #/pagina1 a #/pagina2) SE LLAMA A LA FUNCION ROUTER
- $(window).on('hashchange', function() {
+ $(window).on('hashchange', ()=> {
      router()
  });
