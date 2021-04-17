@@ -28,7 +28,7 @@ class ProductoModel {
     }
 
     agregarProducto(producto) {
-        debugger
+        //debugger
         this.productos.push(new Producto(producto))
         this.guardarProductos()
         const propiedades = "green white-text"
@@ -91,7 +91,7 @@ class ProductoController {
 
     agregar(app) {
         this.productoView.agregarProducto(app, (event) => {
-            debugger
+            //debugger
             let hijos = $(event.target).parent().children();
             this.productoModel.agregarProducto({
                 id: this.productoModel.productos.length + 1,
