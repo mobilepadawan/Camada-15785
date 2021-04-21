@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head> 
+      <meta charset="UTF-8">
+      <title>Buscador de pelis y series</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com"> 
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <link rel="stylesheet" href="css/estilos.css">
+      <script src="js/materialize.min.js"></script>
+      <script src="js/JQuery-3.5.1.min.js"></script>
+      <script defer src="js/busquedas.js"></script>
+  </head>
+  <body>
+      <div class="center">
+         <h3>Búsqueda múltiple</h3>
+         <input id="titulo" type="search" placeholder="Ingrese un título">
+         <select id="categoria" class="browser-default" placeholder="Tipo de film">
+            <option>Película</option>
+            <option>Serie</option>
+         </select>
+         <input id="reparto" type="text" placeholder="Ingrese nombre del actor">
+         <button class="btn-flat large blue white-text waves-effect waves-light"><i class="material-icons">search</i></button>
+      </div>
+  </body>
+</html>
